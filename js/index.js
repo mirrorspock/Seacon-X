@@ -17,40 +17,40 @@ try {
   };
 
      var nodes = [
-    { id: 0, name: "Seacon Experience  ", description: "                         ",      fill: "green",      target: [1, 19,4]},
-    { id: 1, name: "Bouw               ", description: "                         ",      fill: "green",      target: [2, 3] },
-    { id: 2, name: "Ruimte             ", description: "                         ",      fill: "red",        target: [] },
-    { id: 3, name: "Hardware           ", description: "                         ",      fill: "red",        target: [14, 15, 18] },
-    { id: 4, name: "Showcases          ", description: "                         ",      fill: "green",      target: [5, 7, 11, 10, 12, 13] },
-    { id: 5, name: "3D Printer         ", description: "                         ",      fill: "red",        target: [] },
-    { id: 6, name: "AR                 ", description: "                         ",      fill: "blue",       target: [31, 29, 30, 32] },
-    { id: 7, name: "VR                 ", description: "                         ",      fill: "blue",       target: [31, 29, 30, 32] },
-    { id: 8, name: "Relatiegeschenk    ", description: "                         ",      fill: "red",        target: [9, 10] },
-    { id: 9, name: "Google Cardboard   ", description: "                         ",      fill: "red",        target: [] },
-    { id: 10, name: "HoloCube          ", description: "                         ",      fill: "red",        target: [] },
-    { id: 11, name: "Warehouse Drone   ", description: "                         ",      fill: "red",        target: [] },
-    { id: 12, name: "PostDrone         ", description: "                         ",      fill: "red",        target: [] },
-    { id: 13, name: "Selfdriving Trucks", description: "                         ",      fill: "red",        target: [] },
-    { id: 14, name: "Beamers           ", description: "                         ",      fill: "red",        target: [17] },
-    { id: 15, name: "Licht             ", description: "                         ",      fill: "red",        target: [17] },
-    { id: 16, name: "Tech              ", description: "                         ",      fill: "red",        target: [14, 15, 17, 18] },
-    { id: 17, name: "Controls          ", description: "                         ",      fill: "red",        target: [] },
-    { id: 18, name: "PC                ", description: "                         ",      fill: "red",        target: [] },
-    { id: 19, name: "Content           ", description: "                         ",      fill: "green",      target: [25, 20, 24, 26] },
-    { id: 20, name: "PPT               ", description: "                         ",      fill: "lightblue",  target: [23, 22, 21] },
-    { id: 21, name: "Slides            ", description: "                         ",      fill: "lightblue",  target: [] },
-    { id: 22, name: "Verhaal           ", description: "                         ",      fill: "purple",     target: [] },
-    { id: 23, name: "Sjabloon          ", description: "                         ",      fill: "lightblue",  target: [] },
-    { id: 24, name: "WWW               ", description: "                         ",      fill: "lightblue",  target: [22] },
-    { id: 25, name: "Huisstijl         ", description: "                         ",      fill: "purple",     target: [20, 23, 24, 27] },
-    { id: 26, name: "Portal            ", description: "                         ",      fill: "lightblue",  target: [27] },
-    { id: 27, name: "Experience app.   ", description: "                         ",      fill: "lightblue",  target: [21, 22, 28, 31, 7, 6] },
-    { id: 28, name: "360               ", description: "                         ",      fill: "lightblue",  target: [31, 29, 30] },
-    { id: 29, name: "Video             ", description: "                         ",      fill: "lightblue",  target: [] },
-    { id: 30, name: "Stills            ", description: "                         ",      fill: "lightblue",  target: [] },
-    { id: 31, name: "Tour              ", description: "                         ",      fill: "lightblue",  target: [] },
-    { id: 32, name: "Globe             ", description: "                         ",      fill: "lightblue",  target: [] },
-    { id: 33, name: "Narrowcasting.    ", description: "                         ",      fill: "lightblue",  target: [] }
+    { id: 0, name: "Seacon Experience  ", description: "Master Project.          ",size:1,       fill: "green",      target: [1, 19,4]},
+    { id: 1, name: "Bouw               ", description: "Facility                 ",size:1.5,     fill: "green",      target: [2, 3] },
+    { id: 2, name: "Ruimte             ", description: "Facility                 ",              fill: "red",        target: [] },
+    { id: 3, name: "Hardware           ", description: "ICT.                     ",              fill: "red",        target: [14, 15, 18] },
+    { id: 4, name: "Showcases          ", description: "                         ",              fill: "green",      target: [5, 7, 11, 10, 12, 13] },
+    { id: 5, name: "3D Printer         ", description: "                         ",              fill: "red",        target: [] },
+    { id: 6, name: "AR                 ", description: "Augmented reality Demo.  ",              fill: "blue",       target: [31, 29, 30, 32] },
+    { id: 7, name: "VR                 ", description: "Virtual Reality Demo.    ",              fill: "blue",       target: [31, 29, 30, 32] },
+    { id: 8, name: "Relatiegeschenk    ", description: "                         ",              fill: "red",        target: [9, 10] },
+    { id: 9, name: "Google Cardboard   ", description: "                         ",              fill: "red",        target: [] },
+    { id: 10, name: "HoloCube          ", description: "                         ",              fill: "red",        target: [] },
+    { id: 11, name: "Warehouse Drone   ", description: "                         ",              fill: "red",        target: [] },
+    { id: 12, name: "PostDrone         ", description: "                         ",              fill: "red",        target: [] },
+    { id: 13, name: "Selfdriving Trucks", description: "                         ",              fill: "red",        target: [] },
+    { id: 14, name: "Beamers           ", description: "                         ",              fill: "red",        target: [17] },
+    { id: 15, name: "Licht             ", description: "                         ",              fill: "red",        target: [17] },
+    { id: 16, name: "Tech              ", description: "                         ",              fill: "red",        target: [14, 15, 17, 18] },
+    { id: 17, name: "Controls          ", description: "                         ",              fill: "red",        target: [] },
+    { id: 18, name: "PC                ", description: "                         ",              fill: "red",        target: [] },
+    { id: 19, name: "Content           ", description: "                         ",              fill: "green",      target: [25, 20, 24, 26] },
+    { id: 20, name: "PPT               ", description: "                         ",              fill: "lightblue",  target: [23, 22, 21] },
+    { id: 21, name: "Slides            ", description: "                         ",              fill: "lightblue",  target: [] },
+    { id: 22, name: "Verhaal           ", description: "                         ",              fill: "purple",     target: [] },
+    { id: 23, name: "Sjabloon          ", description: "                         ",              fill: "lightblue",  target: [] },
+    { id: 24, name: "WWW               ", description: "                         ",              fill: "lightblue",  target: [22] },
+    { id: 25, name: "Huisstijl         ", description: "                         ",              fill: "purple",     target: [20, 23, 24, 27] },
+    { id: 26, name: "Portal            ", description: "                         ",              fill: "lightblue",  target: [27] },
+    { id: 27, name: "Experience app.   ", description: "                         ",              fill: "lightblue",  target: [21, 22, 28, 31, 7, 6] },
+    { id: 28, name: "360               ", description: "                         ",              fill: "lightblue",  target: [31, 29, 30] },
+    { id: 29, name: "Video             ", description: "                         ",              fill: "lightblue",  target: [] },
+    { id: 30, name: "Stills            ", description: "                         ",              fill: "lightblue",  target: [] },
+    { id: 31, name: "Tour              ", description: "                         ",              fill: "lightblue",  target: [] },
+    { id: 32, name: "Globe             ", description: "                         ",              fill: "lightblue",  target: [] },
+    { id: 33, name: "Narrowcasting.    ", description: "                         ",              fill: "lightblue",  target: [] }
   ];
 
 
@@ -217,7 +217,11 @@ try {
     .attr("cy", function(d) {
       return d.y;
     })
-    .attr("r", circleWidth)
+    .attr("r", function(d){
+      if (d.size) {
+        return circleWidth*d.size;
+      }        
+      return circleWidth})
     .attr("fill", function(d, i) {
       if (d.fill) {
         return d.fill;
