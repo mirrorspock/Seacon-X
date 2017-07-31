@@ -1,10 +1,14 @@
 try {
   // Configure graphics
-  var width = 1000,
+  var width = 1400,
     height = 800;
 
-  var circleWidth = 10,
-    charge = -150,
+  var n;
+  
+  var circleWidth = 15,
+    charge = -750,
+    friction = 0.6,
+    distance = 20,
     gravity = 0.1;
 
   var palette = {
@@ -17,41 +21,42 @@ try {
   };
 
      var nodes = [
-    { id: 0, name: "Seacon Experience  ", description: "Master Project.          ",size:1,       fill: "green",      target: [1, 19,4]},
-    { id: 1, name: "Bouw               ", description: "Facility                 ",size:1.5,     fill: "green",      target: [2, 3] },
-    { id: 2, name: "Ruimte             ", description: "Facility                 ",              fill: "red",        target: [] },
-    { id: 3, name: "Hardware           ", description: "ICT.                     ",              fill: "red",        target: [14, 15, 18] },
-    { id: 4, name: "Showcases          ", description: "                         ",              fill: "green",      target: [5, 7, 11, 10, 12, 13] },
-    { id: 5, name: "3D Printer         ", description: "                         ",              fill: "red",        target: [] },
-    { id: 6, name: "AR                 ", description: "Augmented reality Demo.  ",              fill: "blue",       target: [31, 29, 30, 32] },
-    { id: 7, name: "VR                 ", description: "Virtual Reality Demo.    ",              fill: "blue",       target: [31, 29, 30, 32] },
-    { id: 8, name: "Relatiegeschenk    ", description: "                         ",              fill: "red",        target: [9, 10] },
-    { id: 9, name: "Google Cardboard   ", description: "                         ",              fill: "red",        target: [] },
-    { id: 10, name: "HoloCube          ", description: "                         ",              fill: "red",        target: [] },
-    { id: 11, name: "Warehouse Drone   ", description: "                         ",              fill: "red",        target: [] },
-    { id: 12, name: "PostDrone         ", description: "                         ",              fill: "red",        target: [] },
-    { id: 13, name: "Selfdriving Trucks", description: "                         ",              fill: "red",        target: [] },
-    { id: 14, name: "Beamers           ", description: "                         ",              fill: "red",        target: [17] },
-    { id: 15, name: "Licht             ", description: "                         ",              fill: "red",        target: [17] },
-    { id: 16, name: "Tech              ", description: "                         ",              fill: "red",        target: [14, 15, 17, 18] },
-    { id: 17, name: "Controls          ", description: "                         ",              fill: "red",        target: [] },
-    { id: 18, name: "PC                ", description: "                         ",              fill: "red",        target: [] },
-    { id: 19, name: "Content           ", description: "                         ",              fill: "green",      target: [25, 20, 24, 26] },
-    { id: 20, name: "PPT               ", description: "                         ",              fill: "lightblue",  target: [23, 22, 21] },
-    { id: 21, name: "Slides            ", description: "                         ",              fill: "lightblue",  target: [] },
-    { id: 22, name: "Verhaal           ", description: "                         ",              fill: "purple",     target: [] },
-    { id: 23, name: "Sjabloon          ", description: "                         ",              fill: "lightblue",  target: [] },
-    { id: 24, name: "WWW               ", description: "                         ",              fill: "lightblue",  target: [22] },
-    { id: 25, name: "Huisstijl         ", description: "                         ",              fill: "purple",     target: [20, 23, 24, 27] },
-    { id: 26, name: "Portal            ", description: "                         ",              fill: "lightblue",  target: [27] },
-    { id: 27, name: "Experience app.   ", description: "                         ",              fill: "lightblue",  target: [21, 22, 28, 31, 7, 6] },
-    { id: 28, name: "360               ", description: "                         ",              fill: "lightblue",  target: [31, 29, 30] },
-    { id: 29, name: "Video             ", description: "                         ",              fill: "lightblue",  target: [] },
-    { id: 30, name: "Stills            ", description: "                         ",              fill: "lightblue",  target: [] },
-    { id: 31, name: "Tour              ", description: "                         ",              fill: "lightblue",  target: [] },
-    { id: 32, name: "Globe             ", description: "                         ",              fill: "lightblue",  target: [] },
-    { id: 33, name: "Narrowcasting.    ", description: "                         ",              fill: "lightblue",  target: [] }
-  ];
+    { id: 0, name: "Seacon Experience  ", difficulty: "Easy/Medium/Hard/Project", description: "Master Project.          ",size:1,       fill: "red",      target: [1, 19,4]},
+    { id: 1, name: "Bouw               ", difficulty: "Easy/Medium/Hard/Project", description: "Facility                 ",size:1,       fill: "green",      target: [2, 3] },
+    { id: 2, name: "Ruimte             ", difficulty: "Easy/Medium/Hard/Project", description: "Facility                 ",size:1,       fill: "gray",       target: [] },
+    { id: 3, name: "Hardware           ", difficulty: "Easy/Medium/Hard/Project", description: "ICT.                     ",size:1,       fill: "gray",       target: [14, 15, 18] },
+    { id: 4, name: "Showcases          ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.2,       fill: "green",      target: [5, 7, 11, 10, 12, 13,16] },
+    { id: 5, name: "3D Printer         ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [] },
+    { id: 6, name: "AR                 ", difficulty: "Easy/Medium/Hard/Project", description: "Augmented reality Demo. can start using iPhones, and expand when hardware becomes available  ",size:1.4,       fill: "blue",       target: [32,33] },
+    { id: 7, name: "VR                 ", difficulty: "Easy/Medium/Hard/Project", description: "Virtual Reality Demo. Complexity increases based on wishes, can start with only simple demo, up to a full interactive tour.",size:1.3,       fill: "blue",       target: [31, 28, 32, 9] },
+    { id: 8, name: "Relatiegeschenk    ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [9, 10] },
+    { id: 9, name: "Google Cardboard   ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "orange",        target: [] },
+    { id: 10, name: "HoloCube          ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.4,       fill: "orange",        target: [] },
+    { id: 11, name: "Warehouse Drone   ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "orange",        target: [] },
+    { id: 12, name: "PostDrone         ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "orange",        target: [] },
+    { id: 13, name: "Selfdriving Trucks", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "orange",        target: [] },
+    { id: 14, name: "Beamers           ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "lightgray",  target: [17] },
+    { id: 15, name: "Licht             ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "lightgray",  target: [17] },
+    { id: 16, name: "Narrowcasting     ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "lightgray",  target: [] },
+    { id: 17, name: "Controls          ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "lightgray",  target: [] },
+    { id: 18, name: "PC                ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [17,14] },
+    { id: 19, name: "Content           ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "green",      target: [25, 20, 24, 26] },
+    { id: 20, name: "PPT               ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",  target: [23, 22, 21] },
+    { id: 21, name: "Slides            ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",  target: [] },
+    { id: 22, name: "Verhaal           ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [] },
+    { id: 23, name: "Sjabloon          ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",  target: [] },
+    { id: 24, name: "WWW               ", difficulty: "Easy/Medium/Hard/Project", description: "Seacon website needs to integrate the portal and all stylings must match",size:1,       fill: "lightgray",  target: [22, 32] },
+    { id: 25, name: "Huisstijl         ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [20, 23, 24, 27] },
+    { id: 26, name: "Portal            ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [27] },
+    { id: 27, name: "Experience app.   ", difficulty: "Easy/Medium/Hard/Project", description: "Application used by managers (and customers) to view the Seacon 'Story' ",size:1,       fill: "blue",       target: [21, 22, 28, 31, 7, 6, 32,33] },
+    { id: 28, name: "360               ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.1,       fill: "blue",  target: [31, 29, 30] },
+    { id: 29, name: "360 Video         ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.3,       fill: "lightblue",  target: [] },
+    { id: 30, name: "360 Stills        ", difficulty: "Easy/Medium/Hard/Project", description: "360 photos of various Seacon locations and showcases",size:1.2,              fill: "lightblue",  target: [] },
+    { id: 31, name: "Tour              ", difficulty: "Easy/Medium/Hard/Project", description: "Virtual tour through the Seacon facility and external locations",size:1.3,              fill: "lightblue",  target: [32,28] },
+    { id: 32, name: "Globe             ", difficulty: "Easy/Medium/Hard/Project", description: "Seacon dataglobe, shows various global datasets",size:1.2,              fill: "lightblue",  target: [] },
+    { id: 33, name: "Enhanced Reporting", difficulty: "Easy/Medium/Hard/Project", description: "",size:1.2,              fill: "gray",  target: [] }
+       
+    ];
 
 
   var numNodes = nodes.count;
@@ -79,6 +84,8 @@ try {
   // Create the force layout to calculate and animate node spacing
   var forceLayout = d3.layout
     .force()
+    .friction(friction)
+    .linkDistance(distance)
     .nodes(nodes)
     .links(links)
     .gravity(gravity)
@@ -181,7 +188,7 @@ try {
           // Make the nodes connected to more repulsive
           for (var i = 0; i < d.target.length; i++) {
             if (d2.id == d.target[i]) {
-              return charge * 8;
+              return charge * 2;
             }
           }
 
@@ -270,6 +277,9 @@ try {
 
   // Start the initial layout
   forceLayout.start();
+  // for (var i = n * n; i > 0; --i) forceLayout.tick();
+  // forceLayout.stop();
+  
 } catch (e) {
   alert(e);
 }
