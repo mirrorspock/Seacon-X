@@ -27,7 +27,7 @@ try {
     { id: 3, name: "Hardware           ", difficulty: "Easy/Medium/Hard/Project", description: "ICT.                     ",size:1,       fill: "gray",       target: [14, 15, 18] },
     { id: 4, name: "Showcases          ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.2,       fill: "green",      target: [5, 7, 11, 10, 12, 13,16] },
     { id: 5, name: "3D Printer         ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [] },
-    { id: 6, name: "AR                 ", difficulty: "Easy/Medium/Hard/Project", description: "Augmented reality Demo. can start using iPhones, and expand when hardware becomes available  ",size:1.4,       fill: "blue",       target: [32,33] },
+    { id: 6, name: "AR                 ", difficulty: "Easy/Medium/Hard/Project", description: "Augmented reality Demo. can start using iPhones, and expand when hardware becomes available content matter needs to be discussed, could be an live-overlay to AR graphs.",size:1.4,       fill: "blue",       target: [32,33] },
     { id: 7, name: "VR                 ", difficulty: "Easy/Medium/Hard/Project", description: "Virtual Reality Demo. Complexity increases based on wishes, can start with only simple demo, up to a full interactive tour.",size:1.3,       fill: "blue",       target: [31, 28, 32, 9] },
     { id: 8, name: "Relatiegeschenk    ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "gray",       target: [9, 10] },
     { id: 9, name: "Google Cardboard   ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1,       fill: "orange",        target: [] },
@@ -51,8 +51,8 @@ try {
     { id: 27, name: "Experience app.   ", difficulty: "Easy/Medium/Hard/Project", description: "Application used by managers (and customers) to view the Seacon 'Story' ",size:1,       fill: "blue",       target: [21, 22, 28, 31, 7, 6, 32,33] },
     { id: 28, name: "360               ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.1,       fill: "blue",  target: [31, 29, 30] },
     { id: 29, name: "360 Video         ", difficulty: "Easy/Medium/Hard/Project", description: "                         ",size:1.3,       fill: "lightblue",  target: [] },
-    { id: 30, name: "360 Stills        ", difficulty: "Easy/Medium/Hard/Project", description: "360 photos of various Seacon locations and showcases",size:1.2,              fill: "lightblue",  target: [] },
-    { id: 31, name: "Tour              ", difficulty: "Easy/Medium/Hard/Project", description: "Virtual tour through the Seacon facility and external locations",size:1.3,              fill: "lightblue",  target: [32,28] },
+    { id: 30, name: "360 Stills        ", difficulty: "Easy/Medium/Hard/Project", description: "360 photos of various Seacon locations and showcases, first version can be created in-house",size:1.2,              fill: "lightblue",  target: [] },
+    { id: 31, name: "Tour              ", difficulty: "Easy/Medium/Hard/Project", description: "Virtual tour through the Seacon facility and external locations.",size:1.3,              fill: "lightblue",  target: [32,28] },
     { id: 32, name: "Globe             ", difficulty: "Easy/Medium/Hard/Project", description: "Seacon dataglobe, shows various global datasets",size:1.2,              fill: "lightblue",  target: [] },
     { id: 33, name: "Enhanced Reporting", difficulty: "Easy/Medium/Hard/Project", description: "",size:1.2,              fill: "gray",  target: [] }
        
